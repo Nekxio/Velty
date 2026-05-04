@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "ignorePatterns": ["dist/**", "node_modules/**", ".velty-tmp/**"],
+  "plugins": ["import", "unicorn", "typescript"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error",
+    "pedantic": "warn",
+    "perf": "warn",
+    "style": "warn"
+  },
+  "rules": {
+    "eqeqeq": "error",
+    "no-console": "off",
+    "sort-imports": "off",
+    "sort-keys": "off",
+    "import/no-named-export": "off",
+    "import/prefer-default-export": "off",
+    "import/group-exports": "off",
+    "import/exports-last": "off",
+    "max-classes-per-file": "off",
+    "max-statements": "off",
+    "no-magic-numbers": "off",
+    "no-ternary": "off",
+    "prefer-destructuring": "off",
+    "import/no-nodejs-modules": "off",
+    "no-duplicate-imports": "off",
+    "import/consistent-type-specifier-style": "off",
+    "@typescript-eslint/array-type": ["warn", { "default": "generic", "readonly": "generic" }]
+  }
+}
