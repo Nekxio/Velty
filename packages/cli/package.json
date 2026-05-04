@@ -1,0 +1,63 @@
+{
+  "name": "velty",
+  "version": "0.1.0",
+  "description": "Opinionated CLI for Svelte and SvelteKit.",
+  "license": "MIT",
+  "author": {
+    "name": "Léo Hilaire",
+    "email": "63882847+Nekxio@users.noreply.github.com"
+  },
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "cli",
+    "scaffold",
+    "generator",
+    "add-ons",
+    "tooling",
+    "dx"
+  ],
+  "homepage": "https://github.com/nekxio/velty#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nekxio/velty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nekxio/velty/issues"
+  },
+  "type": "module",
+  "bin": {
+    "velty": "dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build && pnpm run typecheck"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.3.0",
+    "@velty/core": "workspace:*",
+    "@velty/generators": "workspace:*",
+    "citty": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
+}

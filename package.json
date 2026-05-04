@@ -1,0 +1,57 @@
+{
+  "name": "velty-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Workspace for Velty packages.",
+  "license": "MIT",
+  "author": {
+    "name": "Léo Hilaire",
+    "email": "63882847+Nekxio@users.noreply.github.com"
+  },
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "cli",
+    "scaffold",
+    "generator",
+    "add-ons",
+    "tooling",
+    "dx"
+  ],
+  "homepage": "https://github.com/nekxio/velty#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nekxio/velty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nekxio/velty/issues"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "packageManager": "pnpm@10.26.2",
+  "scripts": {
+    "build": "pnpm -r --sort run build",
+    "dev": "pnpm --filter velty run dev",
+    "lint": "oxlint .",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "typecheck": "pnpm -r --sort run typecheck",
+    "test": "vitest run --passWithNoTests",
+    "test:coverage": "vitest run --coverage --passWithNoTests",
+    "changelog": "changelogen --release"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
+    "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "^4.1.5",
+    "changelogen": "^0.6.2",
+    "oxlint": "^1.62.0",
+    "prettier": "^3.8.3",
+    "prettier-plugin-svelte": "^3.5.1",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  }
+}
